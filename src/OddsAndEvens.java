@@ -1,8 +1,9 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class OddsAndEvens {
     public static void main (String args[]){
         Greeting();
+        Gameplay();
     }
 
     public static void Greeting() {
@@ -19,5 +20,26 @@ public class OddsAndEvens {
         } else {
             System.out.println("Please type eather O or P");
         }
+        System.out.println("-----------------------------------------");
+    }
+
+    public static void Gameplay(){
+        System.out.println("How many 'fingers' do you put out?");
+        Scanner input = new Scanner(System.in);
+        int player = input.nextInt();
+        Random rand = new Random();
+        int computer = rand.nextInt(6);
+        System.out.println("The computer plays " + computer + " fingers.");
+        System.out.println("-----------------------------------------");
+        int sum = player + computer;
+        System.out.println(player + " + " + computer + " = " + sum);
+        boolean oddOrEven = sum%2 == 0;
+        if (oddOrEven == true) {
+            System.out.println(sum + " is ...even");
+        } else {System.out.println(sum + " is ...odd");}
+        System.out.println("-----------------------------------------");
+
+
+
     }
 }
