@@ -36,7 +36,15 @@ public class OddsAndEvens {
         boolean oddOrEven = sum%2 == 0;
         if (oddOrEven == true) {
             System.out.println(sum + " is ...even");
-        } else {System.out.println(sum + " is ...odd");}
+            if (player%2 == 0) {
+                System.out.println("You win");
+            } else {System.out.println("Computer wins");}
+        } else {
+            System.out.println(sum + " is ...odd");
+            if (player%2 != 0) {
+                System.out.println("You win");
+            } else {System.out.println("Computer wins");}
+        }
         System.out.println("-----------------------------------------");
 
 
